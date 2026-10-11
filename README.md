@@ -1,8 +1,18 @@
-# THOCS Website — Product Pages Update
+# THOCS Website
 
-React + Vite website for the THOCS beverage portfolio, retaining the supplied THOCS logo and product artwork.
+Responsive React + Vite frontend for THOCS, using the original supplied THOCS logo and product portfolio artwork.
 
-## Run locally
+## Included
+- Homepage with five product lines
+- Five dedicated product routes: `/products/banta-pop`, `/products/chill-quill`, `/products/mini-mojito`, `/products/strong-soda`, `/products/thocs-energy`
+- Interactive flavour search and category filters
+- Quick Vibe Check that recommends a product family
+- Responsive navigation and accessible focus states
+- PIN-code format validation with transparent messaging (a live retailer directory is not connected)
+- Client-side route fallback for static hosting in `public/_redirects`
+- Product-specific document titles and descriptions
+
+## Local development
 
 ```bash
 npm install
@@ -16,44 +26,16 @@ npm run build
 npm run preview
 ```
 
-## Product pages
+Vite outputs production assets to `dist/`.
 
-- `/products/banta-pop`
-- `/products/chill-quill`
-- `/products/mini-mojito`
-- `/products/strong-soda`
-- `/products/thocs-energy`
-
-The product cards and footer links open the matching product page. Browser back/forward navigation is supported.
-
-## Deploy on Render
-
-Use a **Static Site** with:
-
+## Render Static Site settings
 - Build command: `npm install && npm run build`
 - Publish directory: `dist`
-- Root directory: blank (assuming `package.json` is at repository root)
+- Branch: `main`
+- Root directory: leave blank when `package.json` is at repository root
 
-For direct visits and refreshes on product URLs, add a Render rewrite rule in the Static Site dashboard:
-
-- Source: `/*`
-- Destination: `/index.html`
-- Action: `Rewrite`
-
-The `public/_redirects` file is included for hosts that support this convention; Render's dashboard rewrite rule is the important fallback for direct nested-route requests.
-
-## Content accuracy
-
-Product flavours and pack details are transcribed from the user-provided THOCS portfolio PDF. The source artwork lists:
-
-- Mini Mojito: Watermelon, Litchi, Mint, Blueberry; 160 ml ₹10 and 300 ml ₹20.
-- Chill Quill: Lemon Masala and Jeera Masala; 160 ml ₹10 and 300 ml ₹20.
-- Banta Pop: Masala Cola, Pineapple Masala, Mango Masala, Lemon Masala; supplied creative shows 250 ml ₹50.
-- THOCS Energy: Classic Energy, Tropical Punch, Berry Blast, Citrus Blast; supplied creative shows 250 ml ₹60.
-- Strong Soda: 300 ml ₹10.
-
-Confirm prices and pack sizes with the business before public commercial use.
-
-## Important
-
-The PIN-code store finder remains a prototype and does not query a live stockist database. Do not present its confirmation as proof of local availability.
+## Important launch notes
+- Product artwork is the original artwork supplied for the THOCS project; some images are complete campaign panels rather than isolated pack shots. Replace with approved, high-resolution product photography when available.
+- Product prices and pack sizes must be confirmed against current approved packaging before public advertising.
+- The PIN-code UI does not yet query a retailer database or claim to return live store availability.
+- Social links should be updated to the official THOCS profiles before launch.
